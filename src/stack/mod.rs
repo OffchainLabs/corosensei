@@ -17,6 +17,9 @@ cfg_if::cfg_if! {
     } else if #[cfg(all(feature = "default-stack", windows))] {
         mod windows;
         pub use self::windows::DefaultStack;
+    } else if #[cfg(all(feature = "default-stack", target_os = "zkvm"))] {
+        mod sp1;
+        pub use self::sp1::DefaultStack;
     }
 }
 
