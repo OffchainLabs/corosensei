@@ -30,8 +30,8 @@ windows-sys = { version = "0.59.0", features = [
 ], optional = true }
 
 [target.'cfg(target_os = "zkvm")'.dependencies]
-sp1-primitives = { git = "https://github.com/succinctlabs/sp1", rev = "2448769" }
-sp1-zkvm = { git = "https://github.com/succinctlabs/sp1", rev = "2448769" }
+sp1-primitives = { version = "6.2.1" }
+sp1-zkvm = { version = "6.2.1" }
 
 [build-dependencies]
 autocfg = "1.1.0"
